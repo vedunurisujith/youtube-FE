@@ -1,9 +1,5 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import { VideoGrid } from "./VideoGrid";
-import { AppBar } from "./AppBar";
+import  VideoGrid  from "./VideoGrid";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (

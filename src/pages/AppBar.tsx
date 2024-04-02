@@ -1,4 +1,4 @@
-export const AppBar = () => {
+const AppBar = () => {
   return (
     <div className="grid grid-cols-3">
       <div className="col-start-1 pl-3 pt-3">
@@ -73,3 +73,5 @@ export const AppBar = () => {
     </div>
   );
 };
+
+export default AppBar;

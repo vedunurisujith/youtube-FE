@@ -1,4 +1,4 @@
-export const VideoCard = () => {
+ const VideoCard = () => {
   return (
     <div className="cursor-pointer">
       <img className="rounded-500 p-3" src="/photo.png" alt="label_image" />
@@ -17,3 +17,5 @@ export const VideoCard = () => {
     </div>
   );
 };
+
+export default VideoCard;

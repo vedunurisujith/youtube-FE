@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { AppBar } from "./AppBar";
+import AppBar from "./AppBar";
 
 export default function Document() {
   return (
