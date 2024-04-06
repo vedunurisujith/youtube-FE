@@ -1,17 +1,16 @@
 // AppBar.tsx
+import { useContext } from "react";
 import MenuAndIcon from "../components/MenuAndIcon";
+import { MyContext } from "@/context/MyContext";
 
-export interface AppBarProps {
-  toggleSideBar: () => void;
-  isOpen: boolean;
-}
 
-const AppBar = ({ toggleSideBar, isOpen }: AppBarProps) => {
+const AppBar = () => {
+  const {isSideBarOpen} = useContext(MyContext);
   return (
     <div className="grid grid-cols-3">
       <div className="col-start-1 justify-start p-4">
-        <div className={`flex flex-row ${isOpen ? "hidden" : "block"} `}>
-          <MenuAndIcon toggleSideBar={toggleSideBar} isOpen={isOpen} />
+        <div className={`flex flex-row ${isSideBarOpen ? "hidden" : "block"} `}>
+          <MenuAndIcon  />
         </div>
       </div>
       <div>

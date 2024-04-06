@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import VideoGrid from "../components/VideoGrid";
+import { MyContext } from "@/context/MyContext";
 
 export default function Home() {
+  const { currentState } = useContext(MyContext);
+
   return (
     <div>
-      {/* {currentState} */}
-      <VideoGrid />
+      {currentState}
     </div>
   );
 }

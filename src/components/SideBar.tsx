@@ -1,16 +1,19 @@
 import MenuAndIcon from "./MenuAndIcon";
 import { SideElements } from "./SideElements";
-import { SideBarProps } from "../utils/constants";
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { MyContext } from "@/context/MyContext";
 
-const SideBar = ({ isOpen, toggleSideBar }: SideBarProps) => {
+const SideBar = () => {
+  const {isSideBarOpen} = useContext(MyContext);
+  
+
   return (
     <div className=" col-start-1 justify-start p-4 ml-2">
       <aside
-        className={`${isOpen ? "w-60" : "w-0"} transition-width duration-100 overflow-hidden `}
+        className={`${isSideBarOpen ? "w-60" : "w-0"} transition-width duration-100 overflow-hidden `}
       >
         <div className=" flex flex-row ">
-          <MenuAndIcon toggleSideBar={toggleSideBar} isOpen={isOpen} />
+          <MenuAndIcon  />
         </div>
         <div className="mt-10  flex-row ">
           <SideElements />

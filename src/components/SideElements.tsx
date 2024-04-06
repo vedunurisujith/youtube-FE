@@ -1,7 +1,10 @@
 import { sideBarElementsData } from "@/components/sideBarData";
+import { MyContext } from "@/context/MyContext";
+import { useContext } from "react";
 
 export const SideElements = () => {
-  // const [currentState, setCurrentState] = useState(sideBarElementsData[0].component)
+  const {  setCurrentState } = useContext(MyContext);
+
   return (
     <>
       {sideBarElementsData.map((side) => {
@@ -9,6 +12,7 @@ export const SideElements = () => {
           <div key={side.description} className="p-1 m-1 flex  ">
             <button
               onClick={() => {
+                setCurrentState(side.component);
                 console.log(side.description + "button is clicked");
               }}
               className="p-1 m-1 flex w-full cursor-pointer "

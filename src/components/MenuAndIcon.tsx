@@ -1,7 +1,15 @@
 import Link from "next/link";
-import { AppBarProps } from "../pages/AppBar";
+import { MyContext } from "@/context/MyContext";
+import { useContext } from "react";
 
-const MenuAndIcon = ({ toggleSideBar, isOpen }: AppBarProps) => {
+const MenuAndIcon = () => {
+  const {isSideBarOpen, setIsSideBarOpen} = useContext(MyContext);
+  
+    const toggleSideBar=()=> {
+      setIsSideBarOpen(!isSideBarOpen);
+    }
+
+
   return (
     <>
       <button onClick={toggleSideBar} aria-label="Toggle Sidebar">
