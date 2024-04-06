@@ -1,27 +1,17 @@
-import Link from "next/link";
+// AppBar.tsx
+import MenuAndIcon from "../components/MenuAndIcon";
 
-const AppBar = () => {
+export interface AppBarProps {
+  toggleSideBar: () => void;
+  isOpen: boolean;
+}
+
+const AppBar = ({ toggleSideBar, isOpen }: AppBarProps) => {
   return (
     <div className="grid grid-cols-3">
       <div className="col-start-1 justify-start p-4">
-        <div className=" flex flex-row   ">
-          <Link href="/">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="m-2 w-6 h-6"
-            >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-          </svg>
-              </Link>
-          <img className=" ml-4 h-11 w-19 cursor-pointer" src="/logo.png" alt="Youtube" />
+        <div className={`flex flex-row ${isOpen ? "hidden" : "block"} `}>
+          <MenuAndIcon toggleSideBar={toggleSideBar} isOpen={isOpen} />
         </div>
       </div>
       <div>
@@ -52,7 +42,7 @@ const AppBar = () => {
         </div>
       </div>
       <div className="grid grid-cols-10">
-        <div className="col-span-8">
+        <div className="col-span-8 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -75,7 +65,7 @@ const AppBar = () => {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-6 h-6 cursor-pointer"
+            className="w-8 h-8 cursor-pointer"
           >
             <path
               strokeLinecap="round"
