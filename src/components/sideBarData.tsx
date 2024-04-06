@@ -1,6 +1,5 @@
-import Home from "@/pages";
-import TempComponent from "./TempComponent";
 import TempOneComponent from "./TempOneComponent";
+import VideoGrid from "./VideoGrid";
 
 export const sideBarElementsData = [
   {
@@ -21,7 +20,7 @@ export const sideBarElementsData = [
       </svg>
     ),
     description: "Home",
-    component: <Home />,
+    component: <VideoGrid />,
   },
   {
     icon: (

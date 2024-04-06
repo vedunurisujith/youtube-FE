@@ -2,29 +2,20 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import AppBar from "./AppBar";
 import SideBar from "../components/SideBar";
-import { useState } from "react";
-import Home from ".";
+import { MyProvider } from "@/context/MyContext";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isSideBarOpen, setIsSideBarOpen] = useState<boolean>(false);
-  const additionalProps = {
-    // Your additional props here
-    currentState: <Home />,
-  };
 
   return (
+    <MyProvider>
     <div className="flex">
-      <SideBar
-        isOpen={isSideBarOpen}
-        toggleSideBar={() => setIsSideBarOpen(!isSideBarOpen)}
-      />
+      <SideBar />
       <div className="flex-1">
-        <AppBar
-          isOpen={isSideBarOpen}
-          toggleSideBar={() => setIsSideBarOpen(!isSideBarOpen)}
-        />
-        <Component {...pageProps} {...additionalProps} />
+        <AppBar/>
+        <Component {...pageProps}  />
+
       </div>
     </div>
+        </MyProvider>
   );
 }
