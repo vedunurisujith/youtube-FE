@@ -1,14 +1,29 @@
+import Link from "next/link";
+
 const AppBar = () => {
   return (
     <div className="grid grid-cols-3">
-      <div className="col-start-1 pl-3 pt-3">
-        <img
-          className="h-11 ml-2 cursor-pointer"
-          src="/logo.png"
-          alt="Youtube"
-        />
+      <div className="col-start-1 justify-start p-4">
+        <div className=" flex flex-row   ">
+          <Link href="/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="m-2 w-6 h-6"
+            >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+          </svg>
+              </Link>
+          <img className=" ml-4 h-11 w-19 cursor-pointer" src="/logo.png" alt="Youtube" />
+        </div>
       </div>
-
       <div>
         <div className="relative w-full mt-4">
           <input

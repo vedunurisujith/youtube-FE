@@ -1,5 +1,4 @@
-import  VideoGrid  from "./VideoGrid";
-
+import VideoGrid from "./VideoGrid";
 
 export default function Home() {
   return (
