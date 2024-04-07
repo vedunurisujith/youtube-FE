@@ -4,8 +4,7 @@ import React, { useContext } from "react";
 import { MyContext } from "@/context/MyContext";
 
 const SideBar = () => {
-  const {isSideBarOpen} = useContext(MyContext);
-  
+  const { isSideBarOpen } = useContext(MyContext);
 
   return (
     <div className=" col-start-1 justify-start p-4 ml-2">
@@ -13,7 +12,7 @@ const SideBar = () => {
         className={`${isSideBarOpen ? "w-60" : "w-0"} transition-width duration-100 overflow-hidden `}
       >
         <div className=" flex flex-row ">
-          <MenuAndIcon  />
+          <MenuAndIcon />
         </div>
         <div className="mt-10  flex-row ">
           <SideElements />
