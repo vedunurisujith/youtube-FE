@@ -3,12 +3,11 @@ import { MyContext } from "@/context/MyContext";
 import { useContext } from "react";
 
 const MenuAndIcon = () => {
-  const {isSideBarOpen, setIsSideBarOpen} = useContext(MyContext);
-  
-    const toggleSideBar=()=> {
-      setIsSideBarOpen(!isSideBarOpen);
-    }
+  const { isSideBarOpen, setIsSideBarOpen } = useContext(MyContext);
 
+  const toggleSideBar = () => {
+    setIsSideBarOpen(!isSideBarOpen);
+  };
 
   return (
     <>

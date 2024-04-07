@@ -5,17 +5,15 @@ import SideBar from "../components/SideBar";
 import { MyProvider } from "@/context/MyContext";
 
 export default function App({ Component, pageProps }: AppProps) {
-
   return (
     <MyProvider>
-    <div className="flex">
-      <SideBar />
-      <div className="flex-1">
-        <AppBar/>
-        <Component {...pageProps}  />
-
+      <div className="flex">
+        <SideBar />
+        <div className="flex-1">
+          <AppBar />
+          <Component {...pageProps} />
+        </div>
       </div>
-    </div>
-        </MyProvider>
+    </MyProvider>
   );
 }

@@ -3,14 +3,13 @@ import { useContext } from "react";
 import MenuAndIcon from "../components/MenuAndIcon";
 import { MyContext } from "@/context/MyContext";
 
-
 const AppBar = () => {
-  const {isSideBarOpen} = useContext(MyContext);
+  const { isSideBarOpen } = useContext(MyContext);
   return (
     <div className="grid grid-cols-3">
       <div className="col-start-1 justify-start p-4">
         <div className={`flex flex-row ${isSideBarOpen ? "hidden" : "block"} `}>
-          <MenuAndIcon  />
+          <MenuAndIcon />
         </div>
       </div>
       <div>

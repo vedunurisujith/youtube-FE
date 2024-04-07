@@ -1,17 +1,16 @@
-import VideoGrid from '@/components/VideoGrid';
-import React, { createContext, useState, ReactNode } from 'react';
-
+import VideoGrid from "@/components/VideoGrid";
+import React, { createContext, useState, ReactNode } from "react";
 
 type MyContextType = {
   currentState: React.ReactElement;
   setCurrentState: (component: React.ReactElement) => void;
-  isSideBarOpen: boolean,
+  isSideBarOpen: boolean;
   setIsSideBarOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const defaultState = {
   currentState: <VideoGrid />,
-  setCurrentState: () => {}, 
+  setCurrentState: () => {},
   isSideBarOpen: false,
   setIsSideBarOpen: () => {},
 };
@@ -23,19 +22,20 @@ interface MyProviderProps {
 }
 
 export const MyProvider: React.FC<MyProviderProps> = ({ children }) => {
-  const [currentState, setCurrentState] = useState<React.ReactElement>(defaultState.currentState);
-  const [isSideBarOpen, setIsSideBarOpen] = useState(defaultState.isSideBarOpen);
+  const [currentState, setCurrentState] = useState<React.ReactElement>(
+    defaultState.currentState,
+  );
+  const [isSideBarOpen, setIsSideBarOpen] = useState(
+    defaultState.isSideBarOpen,
+  );
   const contextValue = {
     currentState,
     setCurrentState,
     isSideBarOpen,
     setIsSideBarOpen,
-
   };
 
   return (
-    <MyContext.Provider value={contextValue}>
-      {children}
-    </MyContext.Provider>
+    <MyContext.Provider value={contextValue}>{children}</MyContext.Provider>
   );
 };
