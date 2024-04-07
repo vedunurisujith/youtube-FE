@@ -1,16 +1,20 @@
-const ReelCard = () => {
+import {url} from "../utils/constants"
+interface UrlName {
+    name: string;
+   }
+   
+
+const ReelCard: React.FC<url> = (UrlName ) => {{
   return (
-    // <div className="">
-      <div className=" w-full flex  justify-center items-center">
+      <div className=" flex justify-center scrollbar-hide items-center ">
         <iframe
-          className="h-screen w-full aspect-video"
+          className="h-screen w-full snap-proximity aspect-video "
           allow="autoplay"
           allowFullScreen
-          src="/reel.mp4"
+          src = {UrlName.name}
         ></iframe>
       </div>
-    // </div>
   );
-};
+}};
 
 export default ReelCard;
