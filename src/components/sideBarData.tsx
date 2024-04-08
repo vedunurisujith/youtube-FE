@@ -1,6 +1,7 @@
 import VideoGrid from "./VideoGrid";
 import Subscriptions from "./Subscriptions";
 import ShortVideo from "./ShortVideo";
+import VideoFeed from "./VideoFeed";
 
 export const sideBarElementsData = [
   {
@@ -66,6 +67,6 @@ export const sideBarElementsData = [
       </svg>
     ),
     description: "Subscription",
-    component: <Subscriptions />,
+    component: <VideoFeed />,
   },
 ];
