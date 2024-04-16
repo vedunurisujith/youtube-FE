@@ -46,12 +46,12 @@ const VideoFeed: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-purple-400 flex-col">
+    <div className="flex-col">
       {videoSources.map((src, index) => (
         <div
           key={src}
           data-index={index}
-          className="video-element bg-blue-300 flex min-h-screen"
+          className="video-element flex min-h-screen"
         >
           <div className="w-1/4    fixed h-full"></div>
           <div className="flex-1 px-4">

@@ -1,5 +1,5 @@
 const Subscriptions = () => {
-  return <div>Hello this is a sample two component</div>;
+  return <div>Hello this is a simple Subscription page</div>;
 };
 
 export default Subscriptions;

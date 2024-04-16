@@ -47,7 +47,7 @@ export const sideBarElementsData = [
       </svg>
     ),
     description: "Short Video",
-    component: <ShortVideo />,
+    component: <VideoFeed />,
   },
   {
     icon: (
@@ -67,6 +67,6 @@ export const sideBarElementsData = [
       </svg>
     ),
     description: "Subscription",
-    component: <VideoFeed />,
+    component: <Subscriptions />,
   },
 ];
