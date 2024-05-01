@@ -6,7 +6,7 @@ import { MyContext } from "@/context/MyContext";
 const AppBar = () => {
   const { isSideBarOpen } = useContext(MyContext);
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-3 sticky">
       <div className="col-start-1 justify-start p-4">
         <div className={`flex flex-row ${isSideBarOpen ? "hidden" : "block"} `}>
           <MenuAndIcon />
