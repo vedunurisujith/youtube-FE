@@ -1,5 +1,8 @@
 const Subscriptions = () => {
-  return <div>Hello this is a simple Subscription page</div>;
+  return <div>
+      This page simply has all the subscribe button 
+
+  </div>;
 };
 
 export default Subscriptions;
